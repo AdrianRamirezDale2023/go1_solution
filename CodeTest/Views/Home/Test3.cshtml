@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Test 3";
+}
+<h2>@ViewBag.Title.</h2>
+@model PruebaIngreso.Models.Test3Post
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    <div class="mb-3">
+        @Html.LabelFor(model => model.Code, new { @class = "form-label" })
+        @Html.EditorFor(model => model.Code, new { htmlAttributes = new { @class = "form-control form-control-lg fs-15px", @placeholder = "eje: E-U10-DSCVCOVE" } })
+        <div class="text-center">
+            @Html.ValidationMessageFor(model => model.Code, null, new { @class = "text-danger" })
+        </div>
+    </div>
+    <div style="margin-top:10px">
+        <h3>@ViewBag.Message</h3>
+    </div>
+    <div style="margin-top:10px">
+        <button type="submit" class="btn btn-primary btn-lg d-block w-100 fw-500 mb-3">Consultar</button>
+    </div>
+
+}
+
