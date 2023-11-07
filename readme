@@ -1,0 +1,22 @@
+# Cambios en el Proyecto
+En este documento se detallan los cambios realizados en el proyecto. A continuación, se describen las modificaciones y pruebas efectuadas:
+
+## 1. Configuración de Proyectos
+Para poder compilar la aplicación, se realizaron las siguientes modificaciones:
+- Se agregaron los proyectos "Quote" y "Quote.ServicesDescriptor".
+
+## 2. Test 1: Filtro en la Clase Mapper
+En la clase `Mapper` de la librería "Quote", se agregó un filtro para `tourQuotes` por el código del tour en la línea 97.
+
+## 3. Test 2: Cambio de Ruta
+En la clase `RouteConfig`, se cambió el nombre del action de la ruta "Test2" de "prueba2" a "Test2" en la línea 11.
+
+## 4. Test 3: Implementación de Método POST
+Se implementó un método POST en el controlador "Home" que permite recibir un código para consultar en la API especificada. La respuesta se controla por el statusCode del consumo a la librería con "RestSharp". La implementación se encuentra en las líneas 67 a 87 del controlador "Home".
+
+## 5. Test 4: Modificaciones en IMarginProvider e Implementación en DefaultMarginProviderServices
+En la interfaz "IMarginProvider", se agregó el contrato en la línea 8. En el servicio "DefaultMarginProviderServices", se implementó el método que obtiene la lista de información para el margen de cada "TourQuote" entre las líneas 27 y 57.
+
+## 6. Cambios para el Consumo por RestSharp
+Para que el consumo por RestSharp funcione, fue necesario pasar las librerías a .NET Standard 2.0 y el proyecto MVC a .NET Framework 4.6.
+
